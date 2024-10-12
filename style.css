@@ -1,0 +1,208 @@
+/* General Styles for Light Mode */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #333; /* Dark gray text */
+    transition: background-color 0.3s, color 0.3s;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Ensure footer stays at the bottom */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Gallery styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Wrap images horizontally */
+    gap: 20px; /* Add space between the images */
+    justify-content: center; /* Center images */
+    max-height: 80vh;  /* Limit the height of the gallery section */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    padding: 20px;
+    width: 100%;
+}
+
+.gallery img {
+    width: 100%;  /* Ensure images take full width of their container */
+    max-width: 300px; /* Limit image size to a reasonable max width */
+    height: auto;  /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.2s, border 0.3s ease-in-out; /* Smooth transitions */
+    border-radius: 8px; /* Rounded corners */
+    object-fit: cover; /* Ensure image scales properly without distortion */
+}
+
+.gallery img:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+    border: 3px solid #005f73; /* Highlight border on hover */
+}
+
+/* Lightbox styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px; /* Rounded corners for the lightbox image */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Header and Navigation Styles */
+header {
+    background-color: #005f73; /* Deep teal */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Button for Dark/Light Mode Toggle */
+button.mode-toggle {
+    background-color: #0a9396; /* Aquamarine green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.mode-toggle:hover {
+    background-color: #005f73; /* Darker teal when hovered */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: auto;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #1b262c;
+}
+
+nav ul li a.dark-mode {
+    color: #e0e0e0;
+}
+
+button.mode-toggle.dark-mode {
+    background-color: #3282b8;
+}
+
+body.dark-mode .gallery img {
+    border: 2px solid #1b262c; /* Dark border for images in dark mode */
+}
+
+body.dark-mode .gallery img:hover {
+    transform: scale(1.05);
+    border: 3px solid #e0e0e0; /* Lighter border on hover in dark mode */
+}
+
+/* Button for Admin Login */
+/* Button for Admin Login */
+.login-admin-button {
+    background-color: #343a40; /* Blackish-gray background */
+    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Smaller padding for a smaller button */
+    border-radius: 6px; /* Rounded corners */
+    font-size: 16px; /* Smaller font size */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.login-admin-button:hover {
+    background-color: #23272b; /* Darker blackish-gray on hover */
+    color: white; /* Keep text white */
+}
+
+.login-admin-button a {
+    color: inherit; /* Inherit button's text color */
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+    background-color: #6c757d; /* Gray background */
+    color: white; /* White text for contrast */
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px; /* Larger font size */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.login-admin-button:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+    color: white; /* Keep text white */
+}
+
+.login-admin-button a {
+    color: inherit; /* Inherit button's text color */
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
